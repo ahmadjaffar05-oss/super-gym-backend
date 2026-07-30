@@ -1,0 +1,45 @@
+import { Router } from 'express';
+import authRoutes from '../modules/auth/auth.routes';
+import healthRoutes from '../modules/health/health.routes';
+import membersRoutes from '../modules/members/members.routes';
+import dashboardRoutes from '../modules/dashboard/dashboard.routes';
+import plansRoutes from '../modules/plans/plans.routes';
+import coachesRoutes from '../modules/coaches/coaches.routes';
+import paymentsRoutes from '../modules/payments/payments.routes';
+import attendanceRoutes from '../modules/attendance/attendance.routes';
+import programsRoutes from '../modules/programs/programs.routes';
+import nutritionRoutes from '../modules/nutrition/nutrition.routes';
+import bodyMetricsRoutes from '../modules/body-metrics/body-metrics.routes';
+import schedulingRoutes from '../modules/scheduling/scheduling.routes';
+import chatRoutes from '../modules/chat/chat.routes';
+import notificationsRoutes from '../modules/notifications/notifications.routes';
+import reportsRoutes from '../modules/reports/reports.routes';
+import settingsRoutes from '../modules/settings/settings.routes';
+
+const router = Router();
+
+router.use('/health', healthRoutes);
+router.use('/auth', authRoutes);
+router.use('/members', membersRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/membership-plans', plansRoutes);
+router.use('/coaches', coachesRoutes);
+router.use('/payments', paymentsRoutes);
+router.use('/attendance', attendanceRoutes);
+router.use('/programs', programsRoutes);
+router.use('/nutrition', nutritionRoutes);
+router.use('/body-metrics', bodyMetricsRoutes);
+router.use('/scheduling', schedulingRoutes);
+router.use('/chat', chatRoutes);
+router.use('/notifications', notificationsRoutes);
+router.use('/reports', reportsRoutes);
+router.use('/settings', settingsRoutes);
+// router.use('/nutrition', nutritionRoutes);
+// router.use('/body-metrics', bodyMetricsRoutes);
+// router.use('/appointments', appointmentsRoutes);
+// router.use('/chat', chatRoutes);
+// router.use('/notifications', notificationsRoutes);
+// router.use('/reports', reportsRoutes);
+// router.use('/settings', settingsRoutes);
+
+export default router;
